@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>ProjectShell</AssemblyName>
+    <RootNamespace>Hyvart.N64.Shell</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
