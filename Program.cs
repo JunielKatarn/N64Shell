@@ -36,11 +36,12 @@ hashStringBytes.CopyTo(plainBytes, plainBytes.Length - hashStringBytes.Length);
 
 // Compress
 using (var outStream = new MemoryStream())
-using (var defStream = new DeflaterOutputStream(outStream))
 {
-    defStream.Write(plainBytes, 0, plainBytes.Length);
-    defStream.Flush();
-    defStream.Dispose(); // Else, risk getting an incomplete stream below.
+    // Deflater stream must be flushed and disposed before output stream is consumed.
+    using (var defStream = new DeflaterOutputStream(outStream))
+    {
+        defStream.Write(plainBytes, 0, plainBytes.Length);
+    }
 
     regBytes = outStream.ToArray();
 }
