@@ -3,9 +3,10 @@ using Microsoft.Win32;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Hyvart.N64.Shell
+namespace Hyvart.N64.Project64
 {
-public class Project64Unlocker
+
+public class Activator
 {
     public void Unlock()
     {
@@ -64,4 +65,5 @@ public class Project64Unlocker
 
     }
 }
-}
+
+}// Hyvart.N64.Project64
