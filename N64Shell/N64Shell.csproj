@@ -1,8 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-    <AssemblyName>ProjectShell</AssemblyName>
+    <TargetFramework>net6.0</TargetFramework>
     <RootNamespace>Hyvart.N64.Shell</RootNamespace>
   </PropertyGroup>
 
@@ -12,4 +11,7 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Pj64Tools\Project64Tools.csproj" />
+  </ItemGroup>
 </Project>
